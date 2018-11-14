@@ -43,6 +43,7 @@ if (imgName.length == 0) {
 /*画饼图*/
 var chart = Highcharts.chart('container', {
     chart: {
+        height:'165px' ,
         backgroundColor: 'rgba(12,165,253,0.36)',
         plotBackgroundColor: null,  //:绘图区背景色
         plotBorderWidth: null,  //绘图区边框宽度
@@ -87,7 +88,8 @@ var chart = Highcharts.chart('container', {
     },
     series: [{
         type: 'pie',
-        // name: '浏览器访问量占比',
+        size:'90%',
+        innerSize: '50%',
         data: []
     }]
 });
@@ -143,30 +145,40 @@ $.ajax({
                 slideChange:function(){
 
                    console.log(that.index)
-
-                    // if($('.swiper-slide-active audio').length==1){
-                    //     $('.audioPlay')[0].src =  'img/audioPaused.png'
-                    // }else{
-                    //     $('.audioPlay')[0].src =''
-                    // }
                 },
                 slideChangeTransitionEnd:function(){
                     // 改变音频按钮
-                    if($('.swiper-slide-active audio').length==1){
-                        $('.audioPlay')[0].src =  'img/audioPaused.png'
+                    // if($('.swiper-slide-active audio').length==1){
+                    //     console.log('------------------------------------')
+                    //
+                    //     // $('.audioPlay')[0].style.display = 'block'
+                    //     $('.audioPlay1')[0].style.display = 'none'
+                    // }else{
+                    //     $('.audioPlay')[0].style.display = 'none'
+                    //     $('.audioPlay1')[0].style.display = 'none'
+                    // }
+                },
+
+                slideNextTransitionEnd: function(){
+                    if($('#swiper-container1 .swiper-slide-active audio').length==1){
+
+                        $('.audioPlay')[0].style.display = 'block'
+                        $('.audioPlay1')[0].style.display = 'none'
                     }else{
-                        $('.audioPlay')[0].src =''
+                        $('.audioPlay')[0].style.display = 'none'
+                        $('.audioPlay1')[0].style.display = 'none'
                     }
-                }
+                },
             }
         });
 
         that.index  = mySwiper1.realIndex
 
         if($('#swiper-container1 .swiper-slide-active audio').length == 1){
-            $('.audioPlay')[0].src =  'img/audioPaused.png'
+            $('.audioPlay')[0].style.display = 'block'
+
         }else{
-            $('.audioPlay')[0].src =''
+            $('.audioPlay1')[0].style.display = 'none'
         }
         
 
@@ -188,35 +200,103 @@ $.ajax({
         })
         mySwiper1.controller.control = mySwiper2;
         mySwiper2.controller.control = mySwiper1;
+
+
+
+
     }
+
+
 });
 
+
+if($('#swiper-container1 .swiper-slide-active audio').length == 1){
+    $('.audioPlay')[0].style.display = 'block'
+
+}else{
+    $('.audioPlay1')[0].style.display = 'none'
+}
 window.onload = function () {
-    if($('#swiper-container1 .swiper-slide-active audio').length == 1){
-        $('.audioPlay')[0].src =  'img/audioPaused.png'
-    }else{
-        $('.audioPlay')[0].src =''
-    }
+    // if($('#swiper-container1 .swiper-slide-active audio').length == 1){
+    //     $('.audioPlay')[0].style.display = 'block'
+    //
+    // }else{
+    //     $('.audioPlay')[0].style.display = 'none'
+    // }
 }
 
 var audio = '';
 
 $('.audioPlay').click(function () {
+    console.log('开始的点击执行了')
     var that = this
-    this.src = 'img/audioPlay.png';
+    this.style.display = 'none'
+    $('.audioPlay1').css({
+        display:'block'
+    })
+
+
     // $('.audioPlay').css({
     //
     // })
-    audio = $('.swiper-slide-active audio');
+
+
+    audio = $('#swiper-container1 .swiper-slide-active audio');
+    console.log(audio)
     if(audio[0].paused){
         audio[0].play();
     }else{
         audio[0].pause();
-        this.src = 'img/audioPaused.png';
+        $('.audioPlay1').css({
+            display:'block'
+        })
     }
+    console.log(audio)
     audio[0].loop = false;
     audio[0].addEventListener('ended', function () {
-        that.src = 'img/audioPaused.png';
+        console.log('123456-----音频播放完毕')
+        $('.audioPlay1').css({
+            display:'none'
+        })
+        $('.audioPlay').css({
+            display:'block'
+        })
+
     }, false)
+
 })
 
+$('.audioPlay1').click(function () {
+    console.log('暂停的点击执行了')
+    var that = this
+    this.style.display = 'none'
+    $('.audioPlay').css({
+        display:'block'
+    })
+
+
+    // $('.audioPlay').css({
+    //
+    // })
+    audio = $('#swiper-container1 .swiper-slide-active audio');
+    console.log(audio)
+    if(audio[0].paused){
+        audio[0].play();
+    }else{
+        audio[0].pause();
+        $('.audioPlay').css({
+            display:'block'
+        })
+    }
+    console.log(audio)
+    audio[0].loop = false;
+    audio[0].addEventListener('ended', function () {
+        console.log('123456-----音频播放完毕')
+        $('.audioPlay1').css({
+            display:'none'
+        })
+        $('.audioPlay').css({
+            display:'block'
+        })
+    }, false)
+})
