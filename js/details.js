@@ -161,6 +161,7 @@ $.ajax({
 
                 slideNextTransitionEnd: function(){
                     if($('#swiper-container1 .swiper-slide-active audio').length==1){
+                    // 改变音频按钮
 
                         $('.audioPlay')[0].style.display = 'block'
                         $('.audioPlay1')[0].style.display = 'none'
@@ -168,7 +169,7 @@ $.ajax({
                         $('.audioPlay')[0].style.display = 'none'
                         $('.audioPlay1')[0].style.display = 'none'
                     }
-                },
+                }
             }
         });
 
@@ -217,12 +218,21 @@ if($('#swiper-container1 .swiper-slide-active audio').length == 1){
     $('.audioPlay1')[0].style.display = 'none'
 }
 window.onload = function () {
+<<<<<<< HEAD
     // if($('#swiper-container1 .swiper-slide-active audio').length == 1){
     //     $('.audioPlay')[0].style.display = 'block'
     //
     // }else{
     //     $('.audioPlay')[0].style.display = 'none'
     // }
+=======
+    if($('#swiper-container1 .swiper-slide-active audio').length == 1){
+        $('.audioPlay')[0].style.display = 'block'
+
+    }else{
+        $('.audioPlay')[0].style.display = 'none'
+    }
+>>>>>>> 38ae76b4665a7735a121c4339778ba94b6557fff
 }
 
 var audio = '';
@@ -254,6 +264,7 @@ $('.audioPlay').click(function () {
     console.log(audio)
     audio[0].loop = false;
     audio[0].addEventListener('ended', function () {
+<<<<<<< HEAD
         console.log('123456-----音频播放完毕')
         $('.audioPlay1').css({
             display:'none'
@@ -262,6 +273,11 @@ $('.audioPlay').click(function () {
             display:'block'
         })
 
+=======
+        $('.audioPlay1').css({
+            display:'block'
+        })
+>>>>>>> 38ae76b4665a7735a121c4339778ba94b6557fff
     }, false)
 
 })
