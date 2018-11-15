@@ -162,7 +162,7 @@ $.ajax({
                 slideNextTransitionEnd: function(){
                     if($('#swiper-container1 .swiper-slide-active audio').length==1){
                     // 改变音频按钮
-
+                        $('#swiper-container1 .swiper-slide-active audio')[0].pause()
                         $('.audioPlay')[0].style.display = 'block'
                         $('.audioPlay1')[0].style.display = 'none'
                     }else{
