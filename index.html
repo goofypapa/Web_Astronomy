@@ -138,28 +138,12 @@
     $('.go3D').on('touchstart',function(){
         window.location.href = '3D.html';
     })
-    $.ajax({
-        type: "post",
-        url: "http://www.dadpat.com/file/list.do",
-        dataType: "jsonp", //以键/值对的形式
-        async: true,
-        data:{"path":"app/astronomy/list"},
-        success: function (data) {
-            console.log(data.data)
-            var datas = data.data;
 
-            $('.galaxyImg').click(function(){
+    $('.galaxyImg').click(function(){
 
-                var srcI = this.alt;
-                window.location.href = "details.html?name="+srcI;
-            })
-
-
-
-        }
+        var srcI = this.alt;
+        window.location.href = "details.html?name="+srcI;
     })
-
-
 
 
     var swiper = new Swiper('.swiper-container', {
