@@ -140,22 +140,21 @@
 <script>
 
     //监听加载状态改变
+    if( window.history.length == 1 )
+    {
+        // 遮罩层的宽高
+        var blackShadeSize=document.getElementById("loadingDiv");
+        blackShadeSize.style.width = window.screen.availWidth+'px';
+        blackShadeSize.style.height = window.screen.availHeight+'px';
+        $("#blackShade").show();
+    }
+
     window.onload = function(){
-        if(window.history.length == 1){
-            $("#loadingDiv").show()
+        if( window.history.length == 1 ) {
+            $("#blackShade").fadeOut();
         }
     }
 
-    document.onreadystatechange = completeLoading;
-
-    //加载状态为complete时移除loading效果
-    function completeLoading() {
-        if (document.readyState == "complete") {
-            console.log("jiazaiwancheng")
-            var loadingMask = document.getElementById('loadingDiv');
-            loadingMask.parentNode.removeChild(loadingMask);
-        }
-    }
 
 
     $('.back').on( "touchstart",function(){

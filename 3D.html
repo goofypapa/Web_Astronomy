@@ -19,13 +19,7 @@
             background-size: cover;
             -webkit-tap-highlight-color:transparent;
         }
-		/*
-        img {
-            width: 0px;
-            height: 0px;
-            opacity: 0;
-        }
-		*/
+
 
         @media only screen and (device-width: 812px) and (device-height: 375px) and
         (-webkit-device-pixel-ratio: 3) {
@@ -140,7 +134,7 @@
         //自身半径
         var sizeArr = [1392000, 4878, 12103.6, 12756, 6794, 142984, 120540, 51118, 49532, 2298, 3476.28]
         //距离太阳多少千米 去掉4个0
-        var siteArr = [0, 5791, 10820, 14960, 22794, 77833, 142700, 287099, 450400, 591352]
+        var siteArr = [-50, 5791, 10820, 14960, 22794, 77833, 142700, 287099, 450400, 591352]
         //缩小多少倍  决定大小
         var multipleSize = sizeArr[3] / 10;
         //决定大小
@@ -201,7 +195,7 @@
         var renderer;
         function initThree() {
             width = document.getElementById('canvas-frame').clientWidth;
-            height = document.getElementById('canvas-frame').clientHeight;
+            height = document.getElementById('canvas-frame').clientHeight -25;
             console.log(width)
             renderer = new THREE.WebGLRenderer({
                 antialias: true,
