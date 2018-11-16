@@ -27,7 +27,7 @@
         /* 轮播图 */
         .swiper-container{
             height: 7.2rem;
-            width: 12.8rem;
+            width: 15.8rem;
             /* background-color: red; */
             text-align: center;
         }
@@ -45,6 +45,8 @@
         #slideTwo .slideBottom{
             display: flex;
             justify-content: space-between;
+            box-sizing: border-box;
+            padding: 0 1.5rem;
         }
         .swiper-slide img{
             height: 3.5rem;
@@ -85,7 +87,7 @@
     </style>
 </head>
 <body>
-<div id="loadingDiv" class="loader"></div>
+<div id="loadingDiv" class="loader" style="display: none"></div>
 <div id="dv">
         <div style="width: 1.5rem;height: 1.5rem ;position:absolute;top: 0.3rem;left: 0.4rem;" class="back">
             <img src="img/goback.png">
@@ -134,6 +136,11 @@
 <script>
 
     //监听加载状态改变
+    window.onload = function(){
+        if(window.history.length == 1){
+            $("#loadingDiv").show()
+        }
+    }
 
     document.onreadystatechange = completeLoading;
 
