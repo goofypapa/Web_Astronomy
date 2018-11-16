@@ -54,7 +54,8 @@
             margin-top: 0.1rem;
         }
 
-        @media only screen and (device-width: 375px) and (device-height: 812px) and
+        /*@media only screen and (device-width: 375px) and (device-height: 812px) and*/
+        @media only screen and (device-width: 812px) and (device-height: 375px) and
         (-webkit-device-pixel-ratio: 3) {
             /*增加头部适配层*/
             .swiper-container {
@@ -75,6 +76,12 @@
                 position: absolute;
                 top: 0;
                 left: 1.3rem;
+            }
+            .swiper-container{
+                height: 7.2rem;
+                width: 15.8rem;
+                /* background-color: red; */
+                text-align: center;
             }
 
         }
