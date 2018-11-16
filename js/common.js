@@ -5,10 +5,6 @@ onresize = function(){
 };
 var docuHeight = document.documentElement.clientHeight;
 var docuWidth = document.documentElement.clientWidth;
-
-document.getElementById('canvas-frame').style.height = docuHeight +'px';
-document.getElementById('canvas-frame').style.width = docuWidth +'px';
-
 $('#dv').css({
     height:docuHeight,
     width:docuWidth,
