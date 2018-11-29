@@ -35,14 +35,25 @@ console.log(srcI)
 
 var srcII
 
-for(var u = 0;u++ ; u<Id.length){
-    if(resourceId == Id[u]){
-        srcII = resource[u]
-    }else{
-        srcII = srcI
-    }
 
+if(typeof(resourceId) === "string"){
+    for(var u = 0;u++ ; u<Id.length){
+        if(resourceId == Id[u]){
+            srcII = resource[u]
+        }
+    }
 }
+
+if( typeof(resourceId) === "undefined" ){
+    srcII = srcI
+}
+
+
+
+
+
+console.log(srcII)
+
 
 var abc = 123
 
