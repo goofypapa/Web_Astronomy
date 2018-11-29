@@ -9,3 +9,20 @@ $('#dv').css({
     height:docuHeight,
     width:docuWidth,
 });
+
+function back() {
+    //ios ws
+    if(typeof(goofyPapa_back) === "function"){
+        goofyPapa_back();
+        return;
+    }
+    //android ws
+    if( typeof(goofyPapa) !== "undefined" ){
+        goofyPapa.back();
+        return;
+    }
+    if(history.length) {
+        history.go(-1);
+        return;
+    }
+}

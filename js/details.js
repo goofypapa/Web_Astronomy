@@ -6,15 +6,48 @@ function GetQueryString(name) {
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return unescape(r[2]); return null;
 }
+
+
+
+
+var  Id =[
+    "eec511e89a1729ea2409f706de49daa7",
+    "eed211e89a1729ea2409f706c32821c8",
+    "eed211e89a1729ea2409f706d8641359",
+    "eed211e89a1729ea2409f706eba434ea",
+    "eed311e89a1729ea2409f70601fbcfab",
+    "eed311e89a1729ea2409f706151110ac",
+    "eed311e89a1729ea2409f706287275dd",
+    "eed311e89a1729ea2409f7063bc5aa3e",
+    "eed311e89a1729ea2409f7065743c80f",
+    "eed311e89a1729ea2409f70675160f10",
+    "eed311e89a1729ea2409f70684e65e41",
+    "eed311e89a1729ea2409f706a43f9362"
+]
+
+var resource = [ "earth" , "mercury" ,"venus" , "mars","jupiter" , "saturn","uranus" ,"neptune" , "pluto", "sun", "moon", "asteroid" ]
+
+
+
 //定义变量接收url参数
-var srcI = GetQueryString("name");
+var srcI = GetQueryString("resourceId");
 console.log(srcI)
+
+var srcII
+
+for(var u = 0;u++ ; u<Id.length){
+    if(srcI ==Id[u]){
+        srcII = resource[u]
+    }
+    srcI = srcII
+}
+
 
 $('.back').click(function () {
     window.location.href = 'index.html';
 });
-var showPlanetName = showAll[srcI];
-var imgName = imgAll[srcI]
+var showPlanetName = showAll[srcII];
+var imgName = imgAll[srcII]
 //console.log(imgName)
 // console.log(showPlanetName)
 // console.log(showPlanetName[8].length)
@@ -94,7 +127,7 @@ var chart = Highcharts.chart('container', {
     }]
 });
 /*动态添加饼图数据*/
-var pieresult = percent[srcI];
+var pieresult = percent[srcII];
 if (pieresult.length > 1) {
     var chart = $('#container').highcharts();
     chart.series[0].setData(pieresult);
@@ -115,11 +148,11 @@ $.ajax({
     async: true,
     data: { path: 'app/astronomy', name: 'data' },
     success: function (data) {
-        console.log(data.data[srcI])
-        var datas = data.data[srcI];
+        console.log(data.data[srcII])
+        var datas = data.data[srcII];
         for (var i = 0; i < datas.length; i++) {
-            var textAll = $($('#template3').html().replace('$contentImg$', 'http://www.dadpat.com/app/astronomy/' + srcI + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'http://www.dadpat.com/app/astronomy/audio/' + datas[i].audioUrl));
-            var textAll2 = $($('#template4').html().replace('$imgCont$', 'http://www.dadpat.com/app/astronomy/' + srcI + '/small/' + datas[i].imgS));
+            var textAll = $($('#template3').html().replace('$contentImg$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'http://www.dadpat.com/app/astronomy/audio/' + datas[i].audioUrl));
+            var textAll2 = $($('#template4').html().replace('$imgCont$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
             $('#swiper-container1 .swiper-wrapper').append(textAll);
             $('#swiper-container2 .swiper-wrapper').append(textAll2);
         }
@@ -144,7 +177,7 @@ $.ajax({
 
                 slideChange:function(){
 
-                   console.log(that.index)
+                    console.log(that.index)
                 },
                 slideChangeTransitionEnd:function(){
                     // 改变音频按钮
@@ -161,7 +194,7 @@ $.ajax({
 
                 slideNextTransitionEnd: function(){
                     if($('#swiper-container1 .swiper-slide-active audio').length==1){
-                    // 改变音频按钮
+                        // 改变音频按钮
                         $('#swiper-container1 .swiper-slide-active audio')[0].pause()
                         $('.audioPlay')[0].style.display = 'block'
                         $('.audioPlay1')[0].style.display = 'none'
@@ -181,7 +214,7 @@ $.ajax({
         }else{
             $('.audioPlay1')[0].style.display = 'none'
         }
-        
+
 
         var mySwiper2 = new Swiper('#swiper-container2', {
             centeredSlides: true,  //设定为true时，活动块会居中，而不是默认状态下的居左。
@@ -195,7 +228,7 @@ $.ajax({
                     var imgurl = $('#swiper-container2 .swiper-slide-active img').attr("src");
                     var index = imgurl.lastIndexOf("\/");
                     imgurl = imgurl.substring(index + 7, imgurl.length);
-                    $('#swiper-container2 .swiper-slide-active').append('<img src="http://www.dadpat.com/app/astronomy/' + srcI + '/small/' + imgurl + '" class="addImg">');
+                    $('#swiper-container2 .swiper-slide-active').append('<img src="http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
                 },
             },
         })
