@@ -39,7 +39,7 @@ for(var u = 0;u++ ; u<Id.length){
     if(srcI ==Id[u]){
         srcII = resource[u]
     }
-    srcI = srcII
+    srcII = srcI
 }
 
 
