@@ -36,8 +36,9 @@ console.log(srcI)
 var srcII
 
 
+
 if(typeof(resourceId) === "string"){
-    for(var u = 0;u++ ; u<Id.length){
+    for(var u = 0;u<Id.length ;u++  ){
         if(resourceId == Id[u]){
             srcII = resource[u]
         }
@@ -57,9 +58,12 @@ console.log(srcII)
 
 var abc = 123
 
-$('.back').click(function () {
-    window.location.href = 'index.html';
-});
+// $('.back').click(function () {
+//     window.location.href = 'index.html';
+// });
+
+
+
 var showPlanetName = showAll[srcII];
 var imgName = imgAll[srcII]
 //console.log(imgName)
