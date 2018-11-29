@@ -42,6 +42,7 @@ for(var u = 0;u++ ; u<Id.length){
     srcII = srcI
 }
 
+var abc = 123
 
 $('.back').click(function () {
     window.location.href = 'index.html';
