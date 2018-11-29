@@ -36,10 +36,12 @@ console.log(srcI)
 var srcII
 
 for(var u = 0;u++ ; u<Id.length){
-    if(srcI ==Id[u]){
+    if(resourceId == Id[u]){
         srcII = resource[u]
+    }else{
+        srcII = srcI
     }
-    srcII = srcI
+
 }
 
 var abc = 123
