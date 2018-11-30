@@ -36,18 +36,26 @@ console.log(srcI)
 var srcII
 
 
-
-if(typeof(resourceId) === "string"){
-    for(var u = 0;u<Id.length ;u++  ){
-        if(resourceId == Id[u]){
-            srcII = resource[u]
-        }
+for(var u = 0;u<Id.length ;u++  ){
+    if(srcI ==Id[u]){
+        srcII = resource[u]
+    }else{
+        srcII = srcI
     }
 }
 
-if( typeof(resourceId) === "undefined" ){
-    srcII = srcI
-}
+
+// if(typeof(resourceId) === "string"){
+//     for(var u = 0;u<Id.length ;u++  ){
+//         if(resourceId == Id[u]){
+//             srcII = resource[u]
+//         }
+//     }
+// }
+//
+// if( typeof(resourceId) === "undefined" ){
+//     srcII = srcI
+// }
 
 
 
