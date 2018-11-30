@@ -33,14 +33,12 @@ var resource = [ "earth" , "mercury" ,"venus" , "mars","jupiter" , "saturn","ura
 var srcI = GetQueryString("resourceId");
 console.log(srcI)
 
-var srcII
+var srcII = srcI
 
 
 for(var u = 0;u<Id.length ;u++  ){
     if(srcI ==Id[u]){
         srcII = resource[u]
-    }else{
-        srcII = srcI
     }
 }
 
@@ -56,9 +54,6 @@ for(var u = 0;u<Id.length ;u++  ){
 // if( typeof(resourceId) === "undefined" ){
 //     srcII = srcI
 // }
-
-
-
 
 
 console.log(srcII)
