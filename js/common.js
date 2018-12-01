@@ -10,19 +10,4 @@ $('#dv').css({
     width:docuWidth,
 });
 
-function back() {
-    //ios ws
-    if(typeof( goofypapaGame ) != "undefined" && goofypapaGame ){
-        window.location.href='goofypapa://back';
-        return;
-    }
-    //android ws
-    if( typeof(goofyPapa) !== "undefined" ){
-        goofyPapa.back();
-        return;
-    }
-    if(history.length) {
-        history.go(-1);
-        return;
-    }
-}
+

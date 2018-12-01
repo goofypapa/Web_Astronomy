@@ -39,8 +39,29 @@ var srcII = srcI
 for(var u = 0;u<Id.length ;u++  ){
     if(srcI ==Id[u]){
         srcII = resource[u]
+        
     }
 }
+
+function back() {
+    //ios ws
+    if(srcII != srcI){
+        if(typeof( goofypapaGame ) != "undefined" && goofypapaGame ){
+            window.location.href='goofypapa://back';
+            return;
+        }
+    }
+    //android ws
+    if( typeof(goofyPapa) !== "undefined" ){
+        goofyPapa.back();
+        return;
+    }
+    if(history.length) {
+        history.go(-1);
+        return;
+    }
+}
+
 
 
 // if(typeof(resourceId) === "string"){
