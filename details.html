@@ -18,7 +18,7 @@
     <div class="top">
         <img src="img/goback.png"  onclick="back()" class="back">
         <!-- <img src="img/xq_title_pic_earth.png" class="topName"> -->
-        <img src="img/audioPaused.png"  class="audioPlay">
+        <img src="img/audioPaused.png"  class="audioPlaya">
         <img src="img/audioPlay.png"  class="audioPlay1">
     </div>
     <!--内容-->
@@ -93,7 +93,8 @@
         <div class="picContent">
             <img src="$contentImg$">
             <p>$content$</p>
-            <audio src="$audio$"></audio>
+
+            <input class="audio" type="hidden" value="$audio$"/>
         </div>
     </div>
 </div>
@@ -112,6 +113,7 @@
     </div>
 </div>
 
+<script src="js/goofypapaApi.js"></script>
 <script src="js/details.js"></script>
 
 </html>
