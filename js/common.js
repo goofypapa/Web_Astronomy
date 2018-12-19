@@ -6,8 +6,6 @@ onresize = function(){
 var docuHeight = document.documentElement.clientHeight;
 var docuWidth = document.documentElement.clientWidth;
 $('#dv').css({
-    height:docuHeight,
-    width:docuWidth,
+    height:window.screen.availHeight+'px',
+    width:window.screen.availWidth+'px',
 });
-
-

@@ -115,5 +115,71 @@
 
 <script src="js/goofypapaApi.js"></script>
 <script src="js/details.js"></script>
+<script>
+    document.getElementById('dv').style.height = window.screen.availHeight+'px';
+    document.getElementById('dv').style.width = window.screen.availWidth+'px';
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    var isplay = false;
+
+
+    var  Id =[
+        "eec511e89a1729ea2409f706de49daa7",
+        "eed211e89a1729ea2409f706c32821c8",
+        "eed211e89a1729ea2409f706d8641359",
+        "eed211e89a1729ea2409f706eba434ea",
+        "eed311e89a1729ea2409f70601fbcfab",
+        "eed311e89a1729ea2409f706151110ac",
+        "eed311e89a1729ea2409f706287275dd",
+        "eed311e89a1729ea2409f7063bc5aa3e",
+        "eed311e89a1729ea2409f7065743c80f",
+        "eed311e89a1729ea2409f70675160f10",
+        "eed311e89a1729ea2409f70684e65e41",
+        "eed311e89a1729ea2409f706a43f9362"
+    ]
+
+    var resource = [ "earth" , "mercury" ,"venus" , "mars","jupiter" , "saturn","uranus" ,"neptune" , "pluto", "sun", "moon", "asteroid" ]
+
+
+
+    //定义变量接收url参数
+    var srcI = GetQueryString("resourceId");
+    console.log(srcI)
+
+    var srcII = srcI
+
+
+    for(var u = 0;u<Id.length ;u++  ){
+        if(srcI ==Id[u]){
+            srcII = resource[u]
+
+        }
+    }
+
+    function back() {
+        //ios ws
+        if(srcII != srcI){
+            if(typeof( goofypapaGame ) != "undefined" && goofypapaGame ){
+                window.location.href='goofypapa://back';
+                return;
+            }
+        }
+        //android ws
+        if( typeof(goofyPapa) !== "undefined" ){
+            goofyPapa.back();
+            return;
+        }
+        if(history.length) {
+            history.go(-1);
+            return;
+        }
+    }
+
+</script>
 
 </html>

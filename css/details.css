@@ -39,11 +39,11 @@ body{
     width: 4.6rem;
     position: absolute;
     top: 0.3rem;
-    left: 5.7rem;
+    left: 36%;
 }
 /*内容*/
 #swiper-container1{
-    height: 5.9rem;
+    height: 60%;
     width: 100%;
     /*background: red;*/
     position: relative;
@@ -52,19 +52,19 @@ body{
 }
 .picImg{
     height: 100%;
-    width: 7.8rem;
+    width: 44%;
     position: absolute;
     top: 0;
-    left: 1.3rem;
+    left: 1rem;
 }
 .picShow{
-    height: 4.7rem;
-    width: 6.6rem;
+    height: 87%;
+    width: 41%;
     background: url("../img/xq_pic_intro_bj.png") no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     position: absolute;
-    right: 1.7rem;
-    top: 0.6rem;
+    right: 13%;
+    top: 9%;
 }
 .picShow div{
     color: #fbfafd;
@@ -88,11 +88,11 @@ body{
 .picShow p:nth-child(2){
     
     margin-left: 0.8rem;
-    line-height: 1.1rem;
+    line-height: 1rem;
 }
 .picShow p:nth-child(3){
     margin-left: 0.9rem;
-    line-height: 1.1rem;
+    line-height: 1rem;
 }
 .picShow p:nth-child(4){
     margin-left: 0.7rem;
@@ -106,14 +106,14 @@ body{
     width: 10.85rem;
 }
 #swiper-container2 .swiper-slide{
-    height: 1.45rem;
-    width: 2.2rem;
-    margin-top: 0.5rem;
+    height: 10%;
+    width: 20%;
+    margin-top: 5%;
 }
 #swiper-container2 .swiper-slide-active{
-    height: 1.89rem;
-    width: 2.7rem;
-    margin-top: 0.1rem;
+    height: 10%;
+    width: 22%;
+    margin-top: 3.5%;
 }
 #swiper-container2 .swiper-slide img{
     height: 100%;
@@ -122,18 +122,18 @@ body{
 /*构造*/
 .structureLeft,
 .structureRight{
-    height: 4.4rem;
-    width: 6.45rem;      
+    height: 81%;
+    width: 38%;
     border-radius: 0.2rem;
     position: absolute;
-    top: 1rem;
+    top: 14%;
     /*opacity: 0.5;*/
 }
 .structureLeft{
-    left: 1.5rem;
+    left: 12%;
 }
 .structureRight{
-    right: 1.5rem;
+    right: 10%;
 }
 .structureLeft .structureTop,
 .structureRight .structureTop{
@@ -163,7 +163,7 @@ body{
 .structureLeft img{
     position: absolute;
     top: 0.9rem;
-    height: 3.5rem;
+    height: 72%;
     margin-left: 0.1rem;
 }
 #container{
@@ -173,26 +173,26 @@ body{
 }
 /*图、内容*/
 .picContent{
-    height: 5.4rem;
-    width: 12.2rem;
+    height: 95%;
+    width: 76%;
     background: url("../img/xq_pic_font_bj.png") no-repeat;
-    background-size: cover;
-    margin-top: 0.25rem;
-    margin-left: 1.9rem;
+    background-size: 100% 100% ;
+    margin-top: 1%;
+    margin-left: 12%;
 }
 .picContent img{
-    height: 4.9rem;
-    width: 7.4rem;
+    height: 91%;
+    width: 60%;
     margin-left: 0.25rem;
     margin-top: 0.25rem;
     float: left;
 }
 .picContent p{
     color: #fbfafd;
-    height: 3.8rem;
-    width: 4rem;
-    margin-left: 0.25rem;
-    margin-top: 1.1rem;
+    height: 70%;
+    width: 33%;
+    margin-left: 2%;
+    margin-top: 9%;
     float: left;
     overflow: hidden;
     font-size: 0.34rem;
