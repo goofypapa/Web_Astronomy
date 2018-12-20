@@ -51,11 +51,11 @@ body{
     left: 0;
 }
 .picImg{
-    height: 100%;
-    width: 44%;
-    position: absolute;
-    top: 0;
-    left: 1rem;
+    /*height: 93%;*/
+    /*width: 41.2%;*/
+    /*position: absolute;*/
+    /*top: 6%;*/
+    /*left: 13%;*/
 }
 .picShow{
     height: 87%;
@@ -71,8 +71,9 @@ body{
     font-size: 0.3rem;
     /* margin-top: 0.4rem; */
     margin-left: 0.6rem;
-    height: 0.94rem;
-    line-height: 1.2rem;
+    height: 18%;
+    /*line-height: 1.2rem;*/
+    margin-top: 3%;
 }
 .picShow div img{
     width: 0.35rem;
@@ -82,24 +83,28 @@ body{
     color: #fbfafd;
     font-size: 0.3rem;
     margin-left: 0.7rem;
-    height: 0.94rem;
-    line-height: 1rem;
+    margin-bottom: 0.2%;
+    height:18%;
+    margin-top: 1%;
+    /*line-height: 1rem;*/
 }
 .picShow p:nth-child(2){
     
     margin-left: 0.8rem;
-    line-height: 1rem;
+    /*line-height: 1rem;*/
 }
 .picShow p:nth-child(3){
     margin-left: 0.9rem;
-    line-height: 1rem;
+    /*line-height: 1rem;*/
 }
 .picShow p:nth-child(4){
     margin-left: 0.7rem;
+    margin-bottom: 0;
 }
 .picShow p:nth-child(5){
     margin-left: 0.4rem;
-    line-height: 0.8rem;
+    height: 15%;
+    /*line-height: 0.8rem;*/
 }
 /* 缩略图 */
 #swiper-container2{
