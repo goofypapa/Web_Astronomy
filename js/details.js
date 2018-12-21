@@ -85,10 +85,10 @@ window.onload = function () {
     $('#swiper-container2 .swiper-wrapper').append(imgSuo);
     if (showPlanetName.length < 2) {
         $('#introduce').remove();;
-        $('#structure .structureLeft').remove();;
+        $('#structure .structureLeft').remove();
         $('#structure .structureRight').css('left', '5rem');
     } else if (showPlanetName[8].length < 1) {
-        $('#structure .structureLeft').remove();;
+        $('#structure .structureLeft').remove();
         $('#structure .structureRight').css('left', '5rem');
     }
     if (imgName.length < 4) {

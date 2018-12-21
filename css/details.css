@@ -109,6 +109,9 @@ body{
 /* 缩略图 */
 #swiper-container2{
     width: 10.85rem;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
 }
 #swiper-container2 .swiper-slide{
     height: 10%;
@@ -127,7 +130,7 @@ body{
 /*构造*/
 .structureLeft,
 .structureRight{
-    height: 81%;
+    height: 78%;
     width: 38%;
     border-radius: 0.2rem;
     position: absolute;
@@ -142,7 +145,7 @@ body{
 }
 .structureLeft .structureTop,
 .structureRight .structureTop{
-    height: 0.9rem;
+    height: 20%;
     width: 100%;
     background-color: #0ca5fd;
     opacity: 0.63;
@@ -158,7 +161,7 @@ body{
     padding-left: 0.2rem;
 }
 .structureLeft .structureBottom{
-    height: 3.5rem;
+    height: 85%;
     width: 100%;
     background-color: #0ca5fd;
     opacity: 0.36;
@@ -172,7 +175,7 @@ body{
     margin-left: 0.1rem;
 }
 #container{
-    height: 3.5rem;
+    height: 85%;
     width: 100%;
     overflow: hidden;
 }
@@ -186,8 +189,8 @@ body{
     margin-left: 12%;
 }
 .picContent img{
-    height: 91%;
-    width: 60%;
+    /*height: 91%;*/
+    /*width: 60%;*/
     margin-left: 0.25rem;
     margin-top: 0.25rem;
     float: left;
@@ -195,9 +198,9 @@ body{
 .picContent p{
     color: #fbfafd;
     height: 70%;
-    width: 33%;
+    /*width: 47%;*/
     margin-left: 2%;
-    margin-top: 9%;
+    margin-top: 7.7%;
     float: left;
     overflow: hidden;
     font-size: 0.34rem;

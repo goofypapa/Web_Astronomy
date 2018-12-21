@@ -96,9 +96,9 @@
 <!-- 详细介绍 -->
 <div id="template3" style="display: none">
     <div class="swiper-slide">
-        <div class="picContent">
-            <img src="$contentImg$">
-            <p>$content$</p>
+        <div class="picContent" >
+            <img src="$contentImg$" id="picContent">
+            <p id="picContentID">$content$</p>
 
             <input class="audio" type="hidden" value="$audio$"/>
         </div>
@@ -132,6 +132,23 @@
 
     document.getElementById('picImgA').style.width = picImgAW*1.3 +'px';
     document.getElementById('picImgA').style.height = picImgAW +'px';
+
+
+    var picContent = docuHeight*.5;
+
+    var wrapWidth = docuWidth*.57;
+    console.log(wrapWidth)
+
+    document.getElementById('picContent').style.width = picContent*1.5 +'px';
+    document.getElementById('picContent').style.height = picContent +'px';
+
+
+
+    document.getElementById('picContentID').style.width = (wrapWidth - picContent) +'px' ;
+
+
+
+
 
 
 

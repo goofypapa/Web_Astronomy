@@ -146,12 +146,12 @@
         var blackShadeSize=document.getElementById("loadingDiv");
         blackShadeSize.style.width = window.screen.availWidth+'px';
         blackShadeSize.style.height = window.screen.availHeight+'px';
-        $("#blackShade").show();
+        $("#loadingDiv").show();
     }
 
     window.onload = function(){
         if( window.history.length == 1 ) {
-            $("#blackShade").fadeOut();
+            $("#loadingDiv").fadeOut();
         }
     }
 
