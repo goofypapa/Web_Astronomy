@@ -214,9 +214,7 @@ window.onload = function () {
                         //     $('.audioPlay')[0].style.display = 'none'
                         //     $('.audioPlay1')[0].style.display = 'none'
                         // }
-                    },
 
-                    slideNextTransitionEnd: function(){
                         if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
                             // 改变音频按钮
 
@@ -239,6 +237,32 @@ window.onload = function () {
                             $('.audioPlaya')[0].style.display = 'none'
                             $('.audioPlay1')[0].style.display = 'none'
                         }
+
+                    },
+
+                    slideNextTransitionEnd: function(){
+                        // if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
+                        //     // 改变音频按钮
+                        //
+                        //     // $('#swiper-container1 .swiper-slide-active input')[0].pause()
+                        //     if( typeof( goofypapaGame ) != "undefined" && goofypapaGame ){
+                        //         goofypapaStopAllAndPlayAudio(  $('#swiper-container1 .swiper-slide-active input').val(), function(){
+                        //             $('.audioPlaya')[0].style.display = 'block'
+                        //             $('.audioPlay1')[0].style.display = 'none'
+                        //         } );
+                        //     }else if( typeof( window.android ) != "undefined" ) {
+                        //         window.android.initMusic($('.swiper-slide-active input')[0].value);
+                        //         window.android.startMusic();
+                        //     }else{
+                        //         console.log(" p_url ");
+                        //     }
+                        //     $('.audioPlaya')[0].style.display = 'none'
+                        //     $('.audioPlay1')[0].style.display = 'block'
+                        //
+                        // }else{
+                        //     $('.audioPlaya')[0].style.display = 'none'
+                        //     $('.audioPlay1')[0].style.display = 'none'
+                        // }
                     }
                 }
             });

@@ -94,7 +94,7 @@ body{
     /*line-height: 1rem;*/
 }
 .picShow p:nth-child(3){
-    margin-left: 0.9rem;
+    margin-left: 0.75rem;
     /*line-height: 1rem;*/
 }
 .picShow p:nth-child(4){
@@ -207,6 +207,7 @@ body{
     line-height: 0.4rem;
     overflow-y: scroll;
     text-align: justify;
+    letter-spacing: 2px;
 }
 
 
