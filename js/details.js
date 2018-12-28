@@ -441,161 +441,161 @@ window.onload = function () {
         });
     }
 
-    // $.ajax({
-    //     type: "post",
-    //     url: "http://www.dadpat.com/file/json.do",
-    //     dataType: "jsonp", //以键/值对的形式
-    //     async: true,
-    //     data: { path: 'app/astronomy', name: 'data' },
-    //     success: function (data) {
-    //         console.log(data.data[srcII])
-    //         var datas = data.data[srcII];
-    //         for (var i = 0; i < datas.length; i++) {
-    //             var textAll = $($('#template3').html().replace('$contentImg$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'http://www.dadpat.com/app/astronomy/audio/' + datas[i].audioUrl));
-    //             var textAll2 = $($('#template4').html().replace('$imgCont$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
-    //             $('#swiper-container1 .swiper-wrapper').append(textAll);
-    //             $('#swiper-container2 .swiper-wrapper').append(textAll2);
-    //         }
-    //         var index = ""*1
-    //         var that = this
-    //
-    //         var mySwiper1 = new Swiper('#swiper-container1', {
-    //             // loop: true,
-    //             //前进后退按钮
-    //             navigation: {
-    //                 nextEl: '.swiper-button-next',
-    //                 prevEl: '.swiper-button-prev',
-    //             },
-    //             centeredSlides: true,  //设定为true时，活动块会居中，而不是默认状态下的居左。
-    //             on:{
-    //                 slideChangeTransitionStart:function(){
-    //                     // if(audio.length == 1){
-    //                     //     audio[0].pause();
-    //                     //     audio[0].load();
-    //                     // }
-    //                     // alert("slideChangeTransitionStart执行了")
-    //                     // goofypapaStopAllAudio();
-    //                     if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
-    //                         // 改变音频按钮
-    //                         // alert("播放声音了")
-    //                         // $('#swiper-container1 .swiper-slide-active input')[0].pause()
-    //                         if( typeof( goofypapaGame ) != "undefined" && goofypapaGame ){
-    //                             goofypapaStopAllAndPlayAudio(  $('#swiper-container1 .swiper-slide-active input').val(), function(){
-    //                                 $('.audioPlaya')[0].style.display = 'block'
-    //                                 $('.audioPlay1')[0].style.display = 'none'
-    //                             } );
-    //                         }else if( typeof( window.android ) != "undefined" ) {
-    //                             window.android.initMusic($('.swiper-slide-active input')[0].value);
-    //                             window.android.startMusic();
-    //                         }else{
-    //                             console.log(" p_url ");
-    //                         }
-    //                         $('.audioPlaya')[0].style.display = 'none';
-    //                         $('.audioPlay1')[0].style.display = 'block';
-    //
-    //                     }else{
-    //                         // alert("滑动执行了")
-    //                         $('.audioPlaya')[0].style.display = 'none';
-    //                         $('.audioPlay1')[0].style.display = 'none';
-    //                     }
-    //                 },
-    //
-    //
-    //                 slideChange:function(){
-    //                     // alert("slideChange执行了")
-    //                 },
-    //                 slideChangeTransitionEnd:function(){
-    //                     // alert("slideChangeTransitionEnd执行了")
-    //                     // 改变音频按钮
-    //                     // if($('.swiper-slide-active audio').length==1){
-    //                     //     console.log('------------------------------------')
-    //                     //
-    //                     //     // $('.audioPlay')[0].style.display = 'block'
-    //                     //     $('.audioPlay1')[0].style.display = 'none'
-    //                     // }else{
-    //                     //     $('.audioPlay')[0].style.display = 'none'
-    //                     //     $('.audioPlay1')[0].style.display = 'none'
-    //                     // }
-    //                 },
-    //
-    //                 slideNextTransitionEnd: function(){
-    //                     // alert("slideNextTransitionEnd执行了")
-    //                     // if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
-    //                     //     // 改变音频按钮
-    //                     //     alert("播放声音了")
-    //                     //     // $('#swiper-container1 .swiper-slide-active input')[0].pause()
-    //                     //     if( typeof( goofypapaGame ) != "undefined" && goofypapaGame ){
-    //                     //         goofypapaStopAllAndPlayAudio(  $('#swiper-container1 .swiper-slide-active input').val(), function(){
-    //                     //             $('.audioPlaya')[0].style.display = 'block'
-    //                     //             $('.audioPlay1')[0].style.display = 'none'
-    //                     //         } );
-    //                     //     }else if( typeof( window.android ) != "undefined" ) {
-    //                     //         window.android.initMusic($('.swiper-slide-active input')[0].value);
-    //                     //         window.android.startMusic();
-    //                     //     }else{
-    //                     //         console.log(" p_url ");
-    //                     //     }
-    //                     //     $('.audioPlaya')[0].style.display = 'none';
-    //                     //     $('.audioPlay1')[0].style.display = 'block';
-    //                     //
-    //                     // }else{
-    //                     //     alert("滑动执行了")
-    //                     //     $('.audioPlaya')[0].style.display = 'none';
-    //                     //     $('.audioPlay1')[0].style.display = 'none';
-    //                     // }
-    //                 }
-    //             }
-    //         });
-    //
-    //         that.index  = mySwiper1.realIndex
-    //
-    //
-    //
-    //         var mySwiper2 = new Swiper('#swiper-container2', {
-    //             centeredSlides: true,  //设定为true时，活动块会居中，而不是默认状态下的居左。
-    //             slidesPerView: 'auto',
-    //             initialSlide: 0,
-    //             on: {
-    //                 slideChangeTransitionStart: function () {
-    //                     $('#swiper-container2 .addImg').remove();
-    //                 },
-    //                 slideChangeTransitionEnd: function () {
-    //                     var imgurl = $('#swiper-container2 .swiper-slide-active img').attr("src");
-    //                     var index = imgurl.lastIndexOf("\/");
-    //                     imgurl = imgurl.substring(index + 7, imgurl.length);
-    //                     $('#swiper-container2 .swiper-slide-active').append('<img src="http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
-    //                 },
-    //             },
-    //         })
-    //         mySwiper1.controller.control = mySwiper2;
-    //         mySwiper2.controller.control = mySwiper1;
-    //
-    //         if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
-    //             alert("123")
-    //             $('.audioPlay1')[0].style.display = 'block'
-    //
-    //         }else{
-    //             alert("456")
-    //
-    //             $('.audioPlaya')[0].style.display = 'none';
-    //             $('.audioPlay1')[0].style.display = 'none'
-    //         }
-    //
-    //
-    //     }
-    //
-    //
-    // });
+    $.ajax({
+        type: "post",
+        url: "http://www.dadpat.com/file/json.do",
+        dataType: "jsonp", //以键/值对的形式
+        async: true,
+        data: { path: 'app/astronomy', name: 'data' },
+        success: function (data) {
+            console.log(data.data[srcII])
+            var datas = data.data[srcII];
+            for (var i = 0; i < datas.length; i++) {
+                var textAll = $($('#template3').html().replace('$contentImg$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'http://www.dadpat.com/app/astronomy/audio/' + datas[i].audioUrl));
+                var textAll2 = $($('#template4').html().replace('$imgCont$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
+                $('#swiper-container1 .swiper-wrapper').append(textAll);
+                $('#swiper-container2 .swiper-wrapper').append(textAll2);
+            }
+            var index = ""*1
+            var that = this
+
+            var mySwiper1 = new Swiper('#swiper-container1', {
+                // loop: true,
+                //前进后退按钮
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                centeredSlides: true,  //设定为true时，活动块会居中，而不是默认状态下的居左。
+                on:{
+                    slideChangeTransitionStart:function(){
+                        // if(audio.length == 1){
+                        //     audio[0].pause();
+                        //     audio[0].load();
+                        // }
+                        // alert("slideChangeTransitionStart执行了")
+                        // goofypapaStopAllAudio();
+                        if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
+                            // 改变音频按钮
+                            // alert("播放声音了")
+                            // $('#swiper-container1 .swiper-slide-active input')[0].pause()
+                            if( typeof( goofypapaGame ) != "undefined" && goofypapaGame ){
+                                goofypapaStopAllAndPlayAudio(  $('#swiper-container1 .swiper-slide-active input').val(), function(){
+                                    $('.audioPlaya')[0].style.display = 'block'
+                                    $('.audioPlay1')[0].style.display = 'none'
+                                } );
+                            }else if( typeof( window.android ) != "undefined" ) {
+                                window.android.initMusic($('.swiper-slide-active input')[0].value);
+                                window.android.startMusic();
+                            }else{
+                                console.log(" p_url ");
+                            }
+                            $('.audioPlaya')[0].style.display = 'none';
+                            $('.audioPlay1')[0].style.display = 'block';
+
+                        }else{
+                            // alert("滑动执行了")
+                            $('.audioPlaya')[0].style.display = 'none';
+                            $('.audioPlay1')[0].style.display = 'none';
+                        }
+                    },
+
+
+                    slideChange:function(){
+                        // alert("slideChange执行了")
+                    },
+                    slideChangeTransitionEnd:function(){
+                        // alert("slideChangeTransitionEnd执行了")
+                        // 改变音频按钮
+                        // if($('.swiper-slide-active audio').length==1){
+                        //     console.log('------------------------------------')
+                        //
+                        //     // $('.audioPlay')[0].style.display = 'block'
+                        //     $('.audioPlay1')[0].style.display = 'none'
+                        // }else{
+                        //     $('.audioPlay')[0].style.display = 'none'
+                        //     $('.audioPlay1')[0].style.display = 'none'
+                        // }
+                    },
+
+                    slideNextTransitionEnd: function(){
+                        // alert("slideNextTransitionEnd执行了")
+                        // if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
+                        //     // 改变音频按钮
+                        //     alert("播放声音了")
+                        //     // $('#swiper-container1 .swiper-slide-active input')[0].pause()
+                        //     if( typeof( goofypapaGame ) != "undefined" && goofypapaGame ){
+                        //         goofypapaStopAllAndPlayAudio(  $('#swiper-container1 .swiper-slide-active input').val(), function(){
+                        //             $('.audioPlaya')[0].style.display = 'block'
+                        //             $('.audioPlay1')[0].style.display = 'none'
+                        //         } );
+                        //     }else if( typeof( window.android ) != "undefined" ) {
+                        //         window.android.initMusic($('.swiper-slide-active input')[0].value);
+                        //         window.android.startMusic();
+                        //     }else{
+                        //         console.log(" p_url ");
+                        //     }
+                        //     $('.audioPlaya')[0].style.display = 'none';
+                        //     $('.audioPlay1')[0].style.display = 'block';
+                        //
+                        // }else{
+                        //     alert("滑动执行了")
+                        //     $('.audioPlaya')[0].style.display = 'none';
+                        //     $('.audioPlay1')[0].style.display = 'none';
+                        // }
+                    }
+                }
+            });
+
+            that.index  = mySwiper1.realIndex
+
+
+
+            var mySwiper2 = new Swiper('#swiper-container2', {
+                centeredSlides: true,  //设定为true时，活动块会居中，而不是默认状态下的居左。
+                slidesPerView: 'auto',
+                initialSlide: 0,
+                on: {
+                    slideChangeTransitionStart: function () {
+                        $('#swiper-container2 .addImg').remove();
+                    },
+                    slideChangeTransitionEnd: function () {
+                        var imgurl = $('#swiper-container2 .swiper-slide-active img').attr("src");
+                        var index = imgurl.lastIndexOf("\/");
+                        imgurl = imgurl.substring(index + 7, imgurl.length);
+                        $('#swiper-container2 .swiper-slide-active').append('<img src="http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
+                    },
+                },
+            })
+            mySwiper1.controller.control = mySwiper2;
+            mySwiper2.controller.control = mySwiper1;
+
+            if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
+                // alert("123")
+                $('.audioPlay1')[0].style.display = 'block'
+
+            }else{
+                // alert("456")
+
+                $('.audioPlaya')[0].style.display = 'none';
+                $('.audioPlay1')[0].style.display = 'none'
+            }
+
+
+        }
+
+
+    });
 
 
 
 
     if($('#swiper-container1 .swiper-slide-active input').val()!=undefined){
-        alert("789")
+        // alert("789")
         $('.audioPlay1')[0].style.display = 'block'
 
     }else{
-        alert("11111111")
+        // alert("11111111")
         $('.audioPlaya')[0].style.display = 'none';
         $('.audioPlay1')[0].style.display = 'none'
     }

@@ -72,7 +72,7 @@
         <img src="$picImg$" class="picImg" id="picImgA">
     </div>
     <div class="picShow" id="picShow">
-        <div>天文符号<img src="$showImg$"></div>
+        <div id="picdiv">天文符号<img src="$showImg$"></div>
         <p>$p1$</p>
         <p>$p2$</p>
         <p>$p3$</p>
@@ -146,10 +146,14 @@
 
     document.getElementById('picContentID').style.width = (wrapWidth - picContent) +'px' ;
 
-    // var picShowW = docuWidth*.425;
+    // var picShowW = docuWidth*.45;
     //
-    // document.getElementById("picShow").style.width = picShowW +"px";
-    // document.getElementById("picShow").style.height = picShowW/1.32 +"px";
+    // document.getElementById("picShow").style.width = picShowW+"px";
+    // document.getElementById("picShow").style.height = picShowW/1.7 +"px";
+    // document.getElementById("picShow").style.marginTop = picShowW*.05 +"px";
+
+
+    document.getElementById("picdiv").style.marginTop = docuHeight*.04 +"px";
 
 
 
