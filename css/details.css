@@ -69,11 +69,12 @@ body{
 .picShow div{
     color: #fbfafd;
     font-size: 0.3rem;
+    /*font-size: 16px;*/
     /* margin-top: 0.4rem; */
     margin-left: 0.6rem;
-    height: 18%;
+    /*height: 16%;*/
     /*line-height: 1.2rem;*/
-    margin-top: 5.5%;
+    /*margin-top: 5%;*/
 }
 .picShow div img{
     width: 0.35rem;
@@ -84,8 +85,8 @@ body{
     font-size: 0.3rem;
     margin-left: 0.7rem;
     margin-bottom: 0.2%;
-    height:18%;
-    margin-top: .5%;
+    height:16%;
+    /*margin-top: 2.5%;*/
     /*line-height: 1rem;*/
 }
 .picShow p:nth-child(2){

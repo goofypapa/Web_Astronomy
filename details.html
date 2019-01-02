@@ -74,9 +74,9 @@
     <div class="picShow" id="picShow">
         <div id="picdiv">天文符号<img style="display: inline-block;vertical-align: middle;" src="$showImg$"></div>
         <p id="pp1">$p1$</p>
-        <p class="pp">$p2$</p>
-        <p class="pp">$p3$</p>
-        <p class="pp">$p4$</p>
+        <p id="pp2">$p2$</p>
+        <p id="pp3">$p3$</p>
+        <p id="pp4">$p4$</p>
     </div>
 </div>
 <!-- 大气及内部构成 -->
@@ -146,15 +146,20 @@
 
     document.getElementById('picContentID').style.width = (wrapWidth - picContent) +'px' ;
 
-    // var picShowW = docuWidth*.45;
+    var picShowW = $(".picShow").width();
     //
     // document.getElementById("picShow").style.width = picShowW+"px";
     // document.getElementById("picShow").style.height = picShowW/1.7 +"px";
-    // document.getElementById("picShow").style.top = docuHeight*.08 +"px";
+    document.getElementById("picShow").style.top = docuHeight*.06 +"px";
 
-
-    // document.getElementById("picdiv").style.marginTop = docuHeight*.035 +"px";
-    // document.getElementById("pp1").style.marginTop = docuHeight*.01 +"px";
+    console.log(picShowW+"px")
+    document.getElementById("picdiv").style.height = docuHeight*.08 +"px";
+    document.getElementById("picdiv").style.lineHeight = docuHeight*.075 +"px";
+    document.getElementById("picdiv").style.marginTop = docuHeight*.03 +"px";
+    document.getElementById("pp1").style.marginTop = docuHeight*.025 +"px";
+    document.getElementById("pp2").style.marginTop = docuHeight*.02 +"px";
+    document.getElementById("pp3").style.marginTop = docuHeight*.02 +"px";
+    document.getElementById("pp4").style.marginTop = docuHeight*.01 +"px";
 
 
 
