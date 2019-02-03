@@ -76,10 +76,10 @@ window.onload = function () {
 //console.log(imgName)
 // console.log(showPlanetName)
 // console.log(showPlanetName[8].length)
-    $('.top').append('<img src="http://www.dadpat.com/app/astronomy/sign/' + showPlanetName[0] + '" class="topName">');
-    var addParameter = $($('#template1').html().replace('$picImg$', 'http://www.dadpat.com/app/astronomy/sign/' + showPlanetName[1]).replace('$showImg$', 'http://www.dadpat.com/app/astronomy/sign/' + showPlanetName[3]).replace('$p1$', showPlanetName[4]).replace('$p2$', showPlanetName[5]).replace('$p3$', showPlanetName[6]).replace('$p4$', showPlanetName[7]));
-    var interiorImg = $($('#template2').html().replace('$interiorImg$', 'http://www.dadpat.com/app/astronomy/sign/' + showPlanetName[8]));
-    var imgSuo = $($('#template5').html().replace('$imgShow1$', 'http://www.dadpat.com/app/astronomy/sign/' + imgName[3]).replace('$imgShow2$', 'http://www.dadpat.com/app/astronomy/sign/' + imgName[1]))
+    $('.top').append('<img src="https://www.goofypapa.com/app/astronomy/sign/' + showPlanetName[0] + '" class="topName">');
+    var addParameter = $($('#template1').html().replace('$picImg$', 'https://www.goofypapa.com/app/astronomy/sign/' + showPlanetName[1]).replace('$showImg$', 'https://www.goofypapa.com/app/astronomy/sign/' + showPlanetName[3]).replace('$p1$', showPlanetName[4]).replace('$p2$', showPlanetName[5]).replace('$p3$', showPlanetName[6]).replace('$p4$', showPlanetName[7]));
+    var interiorImg = $($('#template2').html().replace('$interiorImg$', 'https://www.goofypapa.com/app/astronomy/sign/' + showPlanetName[8]));
+    var imgSuo = $($('#template5').html().replace('$imgShow1$', 'https://www.goofypapa.com/app/astronomy/sign/' + imgName[3]).replace('$imgShow2$', 'https://www.goofypapa.com/app/astronomy/sign/' + imgName[1]))
     $('#introduce').append(addParameter);
     $('#structure').append(interiorImg);
     $('#swiper-container2 .swiper-wrapper').append(imgSuo);
@@ -168,13 +168,13 @@ window.onload = function () {
         var t_parameter3 = {};
         t_parameter3.path = 'app/astronomy';
         t_parameter3.name = "data";
-        goofypapaGet( "http://www.dadpat.com/file/json.do", t_parameter3, function( data ){
+        goofypapaGet( "https://www.goofypapa.com/file/json.do", t_parameter3, function( data ){
 
             console.log(data.data[srcII])
             var datas = data.data[srcII];
             for (var i = 0; i < datas.length; i++) {
-                var textAll = $($('#template3').html().replace('$contentImg$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'http://www.dadpat.com/app/astronomy/audio/' + datas[i].audioUrl));
-                var textAll2 = $($('#template4').html().replace('$imgCont$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
+                var textAll = $($('#template3').html().replace('$contentImg$', 'https://www.goofypapa.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'https://www.goofypapa.com/app/astronomy/audio/' + datas[i].audioUrl));
+                var textAll2 = $($('#template4').html().replace('$imgCont$', 'https://www.goofypapa.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
                 $('#swiper-container1 .swiper-wrapper').append(textAll);
                 $('#swiper-container2 .swiper-wrapper').append(textAll2);
             }
@@ -304,7 +304,7 @@ window.onload = function () {
                         var imgurl = $('#swiper-container2 .swiper-slide-active img').attr("src");
                         var index = imgurl.lastIndexOf("\/");
                         imgurl = imgurl.substring(index + 7, imgurl.length);
-                        $('#swiper-container2 .swiper-slide-active').append('<img src="http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
+                        $('#swiper-container2 .swiper-slide-active').append('<img src="https://www.goofypapa.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
                     },
                 },
             })
@@ -326,7 +326,7 @@ window.onload = function () {
     }else{
         $.ajax({
             type: "post",
-            url: "http://www.dadpat.com/file/json.do",
+            url: "https://www.goofypapa.com/file/json.do",
             dataType: "jsonp", //以键/值对的形式
             async: true,
             data: { path: 'app/astronomy', name: 'data' },
@@ -334,8 +334,8 @@ window.onload = function () {
                 console.log(data.data[srcII])
                 var datas = data.data[srcII];
                 for (var i = 0; i < datas.length; i++) {
-                    var textAll = $($('#template3').html().replace('$contentImg$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'http://www.dadpat.com/app/astronomy/audio/' + datas[i].audioUrl));
-                    var textAll2 = $($('#template4').html().replace('$imgCont$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
+                    var textAll = $($('#template3').html().replace('$contentImg$', 'https://www.goofypapa.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'https://www.goofypapa.com/app/astronomy/audio/' + datas[i].audioUrl));
+                    var textAll2 = $($('#template4').html().replace('$imgCont$', 'https://www.goofypapa.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
                     $('#swiper-container1 .swiper-wrapper').append(textAll);
                     $('#swiper-container2 .swiper-wrapper').append(textAll2);
                 }
@@ -420,7 +420,7 @@ window.onload = function () {
                             var imgurl = $('#swiper-container2 .swiper-slide-active img').attr("src");
                             var index = imgurl.lastIndexOf("\/");
                             imgurl = imgurl.substring(index + 7, imgurl.length);
-                            $('#swiper-container2 .swiper-slide-active').append('<img src="http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
+                            $('#swiper-container2 .swiper-slide-active').append('<img src="https://www.goofypapa.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
                         },
                     },
                 })
@@ -443,7 +443,7 @@ window.onload = function () {
 
     // $.ajax({
     //     type: "post",
-    //     url: "http://www.dadpat.com/file/json.do",
+    //     url: "https://www.goofypapa.com/file/json.do",
     //     dataType: "jsonp", //以键/值对的形式
     //     async: true,
     //     data: { path: 'app/astronomy', name: 'data' },
@@ -451,8 +451,8 @@ window.onload = function () {
     //         console.log(data.data[srcII])
     //         var datas = data.data[srcII];
     //         for (var i = 0; i < datas.length; i++) {
-    //             var textAll = $($('#template3').html().replace('$contentImg$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'http://www.dadpat.com/app/astronomy/audio/' + datas[i].audioUrl));
-    //             var textAll2 = $($('#template4').html().replace('$imgCont$', 'http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
+    //             var textAll = $($('#template3').html().replace('$contentImg$', 'https://www.goofypapa.com/app/astronomy/' + srcII + '/big/' + datas[i].imgB).replace('$content$', datas[i].text).replace('$audio$', 'https://www.goofypapa.com/app/astronomy/audio/' + datas[i].audioUrl));
+    //             var textAll2 = $($('#template4').html().replace('$imgCont$', 'https://www.goofypapa.com/app/astronomy/' + srcII + '/small/' + datas[i].imgS));
     //             $('#swiper-container1 .swiper-wrapper').append(textAll);
     //             $('#swiper-container2 .swiper-wrapper').append(textAll2);
     //         }
@@ -563,7 +563,7 @@ window.onload = function () {
     //                     var imgurl = $('#swiper-container2 .swiper-slide-active img').attr("src");
     //                     var index = imgurl.lastIndexOf("\/");
     //                     imgurl = imgurl.substring(index + 7, imgurl.length);
-    //                     $('#swiper-container2 .swiper-slide-active').append('<img src="http://www.dadpat.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
+    //                     $('#swiper-container2 .swiper-slide-active').append('<img src="https://www.goofypapa.com/app/astronomy/' + srcII + '/small/' + imgurl + '" class="addImg">');
     //                 },
     //             },
     //         })
